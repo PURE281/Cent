@@ -8,7 +8,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import svgr from "vite-plugin-svgr";
 
 const shouldAnalyze = process.env.ANALYZE === "true";
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
+const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
 
 const plugins: PluginOption[] = [
     Info(),
@@ -50,7 +50,7 @@ if (shouldAnalyze) {
 // https://vite.dev/config/
 export default defineConfig({
     plugins,
-    base: repo ? `/${repo}/` : '/', // 本地用根路径
+    base: repo ? `/${repo}/` : "/", // 本地用根路径
     resolve: {
         alias: {
             "@": resolve("./src"),
