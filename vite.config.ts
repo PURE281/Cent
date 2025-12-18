@@ -49,6 +49,7 @@ if (shouldAnalyze) {
 // https://vite.dev/config/
 export default defineConfig({
     plugins,
+    base:'/<repo>/',
     resolve: {
         alias: {
             "@": resolve("./src"),
